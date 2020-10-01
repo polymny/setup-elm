@@ -20,7 +20,7 @@ async function run() {
     await exec.exec(`curl -L -o elm.gz https://github.com/elm/compiler/releases/download/${version}/binary-for-${os}-64-bit.gz`);
     await exec.exec('gunzip elm.gz');
     await exec.exec('chmod +x elm');
-    await exec.exec('sudo mv elm /usr/local/bin/');
+    await exec.exec('mv elm /usr/local/bin/');
 
     console.log(`Elm ${version} installed.`);
   } 
